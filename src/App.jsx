@@ -22,7 +22,7 @@ function App() {
       }
 
       setHasSearched(true)
-      const url = `http://localhost:8080/outfits?weather=${weather}&temperature=${temperature}`
+      const url = `https://kids-corde-backend.onrender.com/outfits?weather=${weather}&temperature=${temperature}`
       const response = await fetch (url)
       if ( response.ok === false) {
           setOutfits([])
@@ -55,7 +55,7 @@ function App() {
             imageUrl: newImageUrl,
       }
 
-      const response = await fetch('http://localhost:8080/outfits', {
+      const response = await fetch('https://kids-corde-backend.onrender.com/outfits', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify(newOutfit)
@@ -75,7 +75,7 @@ function App() {
 
       const handleDeleteOutfit = async (id) => {
          if (!window.confim('このコーデを削除しますか？')) return
-          const response = await fetch(`http://localhost:8080/outfits/${id}`, {
+          const response = await fetch(`https://kids-corde-backend.onrender.com/outfits/${id}`, {
           method: 'DELETE'
           })
           if ( response.ok) {
