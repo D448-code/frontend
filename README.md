@@ -36,6 +36,19 @@
 ---
 
 ##　データベース設計 (ER図)
+```mermaid
+erDiagram
+    OUTFITS {
+        bigint id PK
+        varchar name
+        varchar weather
+        int min_temperture
+        int max_temperture
+        varchar image_url
+        varchar memo
+}
+```
+        
 
 -テーブル名：`outfits` (id, name, weather, min_temperture, max_temperture, image_url, memo)
 
